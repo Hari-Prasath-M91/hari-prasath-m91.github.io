@@ -56,10 +56,10 @@ const EducationSection = () => {
           {/* Timeline */}
           <div className="relative">
             {/* Timeline line */}
-            <div className="timeline-line" />
+            <div className="timeline-line z-0" />
 
             {/* Education items */}
-            <div className="space-y-12">
+            <div className="space-y-12 relative z-10">
               {educationData.map((item, index) => (
                 <motion.div
                   key={index}
@@ -74,9 +74,9 @@ const EducationSection = () => {
                 >
                   {/* Timeline dot */}
                   <div
-                    className={`absolute left-0 md:left-auto ${
+                    className={`absolute left-4 -translate-x-1/2 md:left-auto ${
                       index % 2 === 0 ? "md:right-0 md:translate-x-1/2" : "md:left-0 md:-translate-x-1/2"
-                    } top-0 w-8 h-8 rounded-full flex items-center justify-center ${
+                    } top-6 w-8 h-8 rounded-full flex items-center justify-center z-20 ${
                       item.highlight
                         ? "bg-gradient-to-br from-primary to-secondary"
                         : "bg-muted border border-border"
